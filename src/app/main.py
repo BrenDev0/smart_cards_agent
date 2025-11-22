@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 import uvicorn
-from src.interface.fastapi.server import create_fastapi_app
+from src.app.interface.fastapi.server import create_fastapi_app
 
 app = create_fastapi_app()
 

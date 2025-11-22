@@ -1,5 +1,5 @@
-from src.core.dependencies.container import Container
-from src.core.domain.exceptions.dependencies import DependencyNotRegistered
+from src.shared.dependencies.container import Container
+from src.shared.domain.exceptions.dependencies import DependencyNotRegistered
 from src.shared.services.ws_transport import WebSocketTransportService
 
 
