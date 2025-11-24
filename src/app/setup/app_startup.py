@@ -3,7 +3,7 @@ import logging
 def startup_event():
     logging.basicConfig(
         level=logging.INFO,
-        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+        format="%(levelname)s - %(name)s - %(message)s"
     )
 
     logging.getLogger("httpx").setLevel(logging.WARNING)

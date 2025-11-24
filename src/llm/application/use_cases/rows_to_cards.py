@@ -32,11 +32,11 @@ class RowsToCards:
                         input=row
                     )
 
-                    cards.append(card)
+                    cards.append(card.model_dump())
 
                     await self.__ws_tranport.send(
-                        connection_id=ws_connection_id,
-                        data=card
+                        connection_id=str(ws_connection_id),
+                        data=card.model_dump()
                     )
 
                     break
@@ -56,6 +56,9 @@ class RowsToCards:
             if retries >= self.__max_retries:
                 logger.error(f"Max retries exceeded for row: {row}")
         
+        await self.__ws_tranport.send(
+            connection_id=ws_connection_id,
+            data={"closeConnection": True})
         return cards
 
 

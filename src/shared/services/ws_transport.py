@@ -11,7 +11,7 @@ class WebSocketTransportService:
         connection_id: Union[str, UUID],
         data: Any
     ):
-        ws = WebsocketConnectionsContainer.resolve_connection(connection_id=connection_id)
+        ws = WebsocketConnectionsContainer.resolve_connection(connection_id=str(connection_id))
 
         if ws:
             try: 

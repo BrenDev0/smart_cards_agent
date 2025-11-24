@@ -62,7 +62,7 @@ class SmartCard(BaseModel):
         examples=["https://www.company.com", "www.business.com", "mysite.com"]
     )
 
-    url_youtube: Optional[str] = Field(
+    urlYoutube: Optional[str] = Field(
         default=None,
         description="YouTube channel or video URL. May be found as: 'youtube', 'youtube_url', 'youtube_channel', 'yt'",
         examples=["https://youtube.com/c/channelname", "youtube.com/user/username"]
