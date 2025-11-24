@@ -14,7 +14,6 @@ async def verify_hmac(request: Request) -> bool:
     if not secret:
         raise ValueError("Missing HMAC_SECRET environment variable")
     
-    logger.info(f"header :::::::{request.headers}")
     signature = request.headers.get('x-signature')
     payload = request.headers.get('x-payload')
     
